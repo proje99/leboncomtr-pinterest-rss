@@ -1,0 +1,85 @@
+<% layout('layout') -%>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-number"><%= productCount %></div>
+        <div>Aktif Ürün</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">2</div>
+        <div>RSS Feed Türü</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">100%</div>
+        <div>Pinterest Uyumlu</div>
+    </div>
+</div>
+
+<h2>🎯 RSS Feed URL'leriniz</h2>
+
+<div style="margin: 20px 0;">
+    <h3>📌 Pinterest için Optimize Edilmiş RSS</h3>
+    <div class="rss-url" id="pinterest-rss">
+        <%= rssUrl %>
+    </div>
+    <button class="copy-btn" onclick="copyToClipboard('<%= rssUrl %>')">Kopyala</button>
+    
+    <h3>📡 Standart RSS Feed</h3>
+    <div class="rss-url" id="standard-rss">
+        <%= standardRssUrl %>
+    </div>
+    <button class="copy-btn" onclick="copyToClipboard('<%= standardRssUrl %>')">Kopyala</button>
+</div>
+
+<div class="instructions">
+    <h3>📋 Pinterest'e Nasıl Bağlanır?</h3>
+    
+    <div class="step">
+        <strong>1. Adım:</strong> Pinterest Business hesabınıza giriş yapın
+    </div>
+    
+    <div class="step">
+        <strong>2. Adım:</strong> Settings > Data sources > RSS feeds bölümüne gidin
+    </div>
+    
+    <div class="step">
+        <strong>3. Adım:</strong> "Add RSS feed" butonuna tıklayın
+    </div>
+    
+    <div class="step">
+        <strong>4. Adım:</strong> Pinterest RSS URL'nizi yapıştırın ve "Add" butonuna tıklayın
+    </div>
+    
+    <div class="step">
+        <strong>5. Adım:</strong> Feed'in doğrulandığını kontrol edin ve aktifleştirin
+    </div>
+</div>
+
+<div style="margin-top: 30px;">
+    <h3>⚙️ RSS Feed Özellikleri</h3>
+    <ul>
+        <li>✅ Ürün görselleri otomatik eklenir</li>
+        <li>✅ Fiyat bilgileri dahil edilir</li>
+        <li>✅ Stok durumu gösterilir</li>
+        <li>✅ Ürün kategorileri ve etiketleri</li>
+        <li>✅ Pinterest için optimize edilmiş görsel boyutları</li>
+        <li>✅ Otomatik HTML temizleme</li>
+        <li>✅ Türkçe dil desteği</li>
+    </ul>
+</div>
+
+<div style="margin-top: 30px; padding: 20px; background: #f0f9ff; border-radius: 6px; border: 1px solid #0ea5e9;">
+    <h3>💡 İpuçları</h3>
+    <ul>
+        <li>RSS feed'iniz her ürün güncellemesinde otomatik olarak yenilenir</li>
+        <li>Pinterest, RSS feed'inizi 24 saatte bir kontrol eder</li>
+        <li>Yeni ürünler otomatik olarak Pinterest'e eklenir</li>
+        <li>Ürün silindiğinde Pinterest'ten de kaldırılır</li>
+    </ul>
+</div>
+
+<div style="margin-top: 20px; text-align: center;">
+    <a href="/settings" style="background: #008060; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">
+        ⚙️ Ayarları Düzenle
+    </a>
+</div>

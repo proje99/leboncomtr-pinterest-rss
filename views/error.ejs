@@ -1,0 +1,25 @@
+<% layout('layout') -%>
+
+<div class="error">
+    <h2>❌ Hata Oluştu</h2>
+    <p><strong>Hata:</strong> <%= error %></p>
+    <% if (typeof message !== 'undefined') { %>
+        <p><strong>Detay:</strong> <%= message %></p>
+    <% } %>
+</div>
+
+<div style="margin: 30px 0; padding: 20px; background: #f6f6f7; border-radius: 6px;">
+    <h3>🔧 Sorun Giderme</h3>
+    <ul>
+        <li>Sayfayı yenilemeyi deneyin</li>
+        <li>Shopify Admin paneline tekrar giriş yapın</li>
+        <li>Uygulamanın doğru kurulduğundan emin olun</li>
+        <li>API izinlerinin verildiğini kontrol edin</li>
+    </ul>
+</div>
+
+<div style="text-align: center; margin-top: 30px;">
+    <a href="/" style="background: #008060; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">
+        🏠 Ana Sayfaya Dön
+    </a>
+</div>

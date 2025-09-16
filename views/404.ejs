@@ -1,0 +1,25 @@
+<% layout('layout') -%>
+
+<div style="text-align: center; padding: 50px 20px;">
+    <h1 style="font-size: 4em; color: #6c757d; margin: 0;">404</h1>
+    <h2>Sayfa Bulunamadı</h2>
+    <p style="color: #6c757d; font-size: 1.2em; margin: 20px 0;">
+        <%= message || 'Aradığınız sayfa mevcut değil.' %>
+    </p>
+    
+    <div style="margin: 40px 0;">
+        <a href="/" style="background: #008060; color: white; padding: 15px 30px; text-decoration: none; border-radius: 6px; display: inline-block; font-size: 1.1em;">
+            🏠 Ana Sayfaya Dön
+        </a>
+    </div>
+    
+    <div style="margin-top: 30px; padding: 20px; background: #f6f6f7; border-radius: 6px; max-width: 500px; margin-left: auto; margin-right: auto;">
+        <h3>🔍 Mevcut Sayfalar</h3>
+        <ul style="text-align: left; list-style: none; padding: 0;">
+            <li>📌 <a href="/" style="color: #008060;">Ana Sayfa</a> - RSS feed yönetimi</li>
+            <li>⚙️ <a href="/settings" style="color: #008060;">Ayarlar</a> - RSS feed konfigürasyonu</li>
+            <li>📡 <a href="/rss" style="color: #008060;">RSS Feed</a> - Standart RSS</li>
+            <li>📌 <a href="/rss/pinterest" style="color: #008060;">Pinterest RSS</a> - Pinterest için optimize</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+<% layout('layout') -%>
+
+<h2>⚙️ RSS Feed Ayarları</h2>
+
+<div style="margin: 20px 0;">
+    <h3>📌 Mevcut RSS Feed URL'leriniz</h3>
+    
+    <div style="margin: 15px 0;">
+        <label><strong>Pinterest RSS Feed:</strong></label>
+        <div class="rss-url">
+            <%= rssUrl %>
+        </div>
+        <button class="copy-btn" onclick="copyToClipboard('<%= rssUrl %>')">Kopyala</button>
+    </div>
+    
+    <div style="margin: 15px 0;">
+        <label><strong>Standart RSS Feed:</strong></label>
+        <div class="rss-url">
+            <%= standardRssUrl %>
+        </div>
+        <button class="copy-btn" onclick="copyToClipboard('<%= standardRssUrl %>')">Kopyala</button>
+    </div>
+</div>
+
+<div class="instructions">
+    <h3>🔧 RSS Feed Yapılandırması</h3>
+    <p>RSS feed'iniz aşağıdaki ayarlarla otomatik olarak oluşturulur:</p>
+    
+    <ul>
+        <li><strong>Başlık:</strong> "Mağaza Ürünleri"</li>
+        <li><strong>Açıklama:</strong> "Mağazamızdaki tüm ürünler"</li>
+        <li><strong>Dil:</strong> Türkçe (tr)</li>
+        <li><strong>Güncelleme Sıklığı:</strong> Otomatik (ürün değişikliklerinde)</li>
+        <li><strong>Maksimum Ürün:</strong> 250 (sayfalama ile daha fazla)</li>
+    </ul>
+</div>
+
+<div style="margin: 30px 0; padding: 20px; background: #fff7e6; border-radius: 6px; border: 1px solid #ffd591;">
+    <h3>📊 RSS Feed İstatistikleri</h3>
+    <p>RSS feed'inizin performansını kontrol etmek için aşağıdaki linkleri kullanabilirsiniz:</p>
+    
+    <div style="margin: 15px 0;">
+        <a href="/api/products/count" target="_blank" style="color: #008060; text-decoration: none;">
+            📈 Ürün Sayısını Kontrol Et
+        </a>
+    </div>
+    
+    <div style="margin: 15px 0;">
+        <a href="/rss" target="_blank" style="color: #008060; text-decoration: none;">
+            🔍 Standart RSS Feed'i Görüntüle
+        </a>
+    </div>
+    
+    <div style="margin: 15px 0;">
+        <a href="/rss/pinterest" target="_blank" style="color: #008060; text-decoration: none;">
+            📌 Pinterest RSS Feed'i Görüntüle
+        </a>
+    </div>
+</div>
+
+<div style="margin: 30px 0; padding: 20px; background: #f6ffed; border-radius: 6px; border: 1px solid #b7eb8f;">
+    <h3>✅ RSS Feed Doğrulama</h3>
+    <p>RSS feed'inizin doğru çalıştığını kontrol etmek için:</p>
+    
+    <ol>
+        <li>RSS feed URL'nizi kopyalayın</li>
+        <li><a href="https://validator.w3.org/feed/" target="_blank" style="color: #008060;">W3C RSS Validator</a>'a gidin</li>
+        <li>URL'nizi yapıştırın ve "Check" butonuna tıklayın</li>
+        <li>Hata varsa düzeltin, yoksa Pinterest'e ekleyebilirsiniz</li>
+    </ol>
+</div>
+
+<div style="margin: 30px 0; padding: 20px; background: #e6f7ff; border-radius: 6px; border: 1px solid #91d5ff;">
+    <h3>🚀 Pinterest Entegrasyonu</h3>
+    <p>RSS feed'inizi Pinterest'e bağlamak için:</p>
+    
+    <div class="step">
+        <strong>1. Adım:</strong> Pinterest Business hesabınıza giriş yapın
+    </div>
+    
+    <div class="step">
+        <strong>2. Adım:</strong> Settings > Data sources > RSS feeds bölümüne gidin
+    </div>
+    
+    <div class="step">
+        <strong>3. Adım:</strong> "Add RSS feed" butonuna tıklayın
+    </div>
+    
+    <div class="step">
+        <strong>4. Adım:</strong> Pinterest RSS URL'nizi yapıştırın
+    </div>
+    
+    <div class="step">
+        <strong>5. Adım:</strong> Feed'i doğrulayın ve aktifleştirin
+    </div>
+</div>
+
+<div style="margin-top: 20px; text-align: center;">
+    <a href="/" style="background: #008060; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block; margin-right: 10px;">
+        ← Ana Sayfaya Dön
+    </a>
+    <button onclick="location.reload()" style="background: #6c757d; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer;">
+        🔄 Sayfayı Yenile
+    </button>
+</div>
